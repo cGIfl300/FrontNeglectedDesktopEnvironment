@@ -1,0 +1,23 @@
+{% include "headers.html" %}
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Databases</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for database in databases %}
+            <tr>
+                <td>Database URL postgres://{{database.name}}:{{database.password}}@colibri.spot42.com/{{database.name}}
+                </td>
+                <td><a href="delete/?id={{database.id}}">delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="create/">Add a database</a>
+
+</div>
+{% include "footers.html" %}
