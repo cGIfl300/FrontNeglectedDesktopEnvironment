@@ -1,1 +1,7 @@
 django
+asgiref
+gunicorn
+dj-database-url
+pillow
+psycopg2-binary
+requests
